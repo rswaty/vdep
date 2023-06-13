@@ -1,0 +1,21 @@
+name: vdep
+output_dir: ../docs
+navbar:
+  title: vdep
+  left:
+  - text: Home
+    href: index.html
+  - text: With attribute data
+    href: data_wrangling.html
+  - text: About
+    href: about.html
+  right:
+  - icon: fab fa-github
+    text: Source code
+    href: https://github.com/rswaty/vdep
+output:
+  workflowr::wflow_html:
+    toc: yes
+    toc_float: yes
+    theme: cosmo
+    highlight: textmate

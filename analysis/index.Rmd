@@ -1,0 +1,44 @@
+---
+title: "Home"
+site: workflowr::wflow_site
+author: "Randy Swaty"
+output:
+  workflowr::wflow_html:
+    toc: false
+    code_folding: hide
+editor_options:
+  chunk_output_type: console
+---
+
+Providing background, code and guidance to help R users interested in exploring and visualizing Vegetation Departure (VDEP; see About page for VDEP documentation).  We will be working with data from the Southern High Allegheny Mountains subsection (aka "335Ba"; [Cleland et al., 2007](https://www.fs.usda.gov/research/treesearch/48672){target="blank"}), located in West Virginia:
+
+<br>
+
+```{r locator map, message=FALSE, warning=FALSE}
+
+# load packages
+
+library(sf)
+library(terra)
+library(tidyverse)
+library(tmap)
+
+#  read shape
+shp <- st_read("data/sub335Ba.shp", quiet = TRUE) %>% 
+  st_transform(crs = 5070) %>%
+  st_union() %>%
+  st_sf()
+# toggle tmap mode to interactive viewing
+tmap_mode("view")
+
+# create a quick interactive map
+quickmap <- qtm(shp, 
+                borders = "darkgreen", 
+                fill = NULL, 
+                check.and.fix = TRUE, 
+                basemaps = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
+                title = 'Southern High Allegheny Mountains Subsection',)
+
+quickmap
+```
+
