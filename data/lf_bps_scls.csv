@@ -1,0 +1,112 @@
+﻿OID_,Value,Count,Clip_OutRaster_LC16_BPS_200_tif,LC20_SCla_220,BPS_MODEL,BPS_NAME,LABEL
+1,1,362448.000000000000000,1883,2,13700_53_61_62,Appalachian (Hemlock-)Northern Hardwood Forest,B
+2,2,194435.000000000000000,1874,5,13180_57_59_61,Southern and Central Appalachian Cove Forest,E
+3,3,75052.000000000000000,1888,2,14720_61_62_63,Central Interior and Appalachian Riparian Systems,B
+4,4,38464.000000000000000,1874,4,13180_57_59_61,Southern and Central Appalachian Cove Forest,D
+5,5,70314.000000000000000,1883,3,13700_53_61_62,Appalachian (Hemlock-)Northern Hardwood Forest,C
+6,6,19355.000000000000000,1874,7,13180_57_59_61,Southern and Central Appalachian Cove Forest,UE
+7,7,57290.000000000000000,1883,7,13700_53_61_62,Appalachian (Hemlock-)Northern Hardwood Forest,UE
+8,8,44204.000000000000000,1883,4,13700_53_61_62,Appalachian (Hemlock-)Northern Hardwood Forest,D
+9,9,109856.000000000000000,1875,5,13200_48_57_61,Central and Southern Appalachian Montane Oak Forest,E
+10,10,24447.000000000000000,1875,4,13200_48_57_61,Central and Southern Appalachian Montane Oak Forest,D
+11,11,16568.000000000000000,1888,3,14720_61_62_63,Central Interior and Appalachian Riparian Systems,C
+12,12,9752.000000000000000,1888,5,14720_61_62_63,Central Interior and Appalachian Riparian Systems,E
+13,13,13276.000000000000000,1888,120,14720_61_62_63,Central Interior and Appalachian Riparian Systems,Developed
+14,14,18734.000000000000000,1874,120,13180_57_59_61,Southern and Central Appalachian Cove Forest,Developed
+15,15,15259.000000000000000,1883,120,13700_53_61_62,Appalachian (Hemlock-)Northern Hardwood Forest,Developed
+16,16,5229.000000000000000,1875,120,13200_48_57_61,Central and Southern Appalachian Montane Oak Forest,Developed
+17,17,7558.000000000000000,1888,7,14720_61_62_63,Central Interior and Appalachian Riparian Systems,UE
+18,18,24143.000000000000000,1875,7,13200_48_57_61,Central and Southern Appalachian Montane Oak Forest,UE
+19,19,7158.000000000000000,1883,6,13700_53_61_62,Appalachian (Hemlock-)Northern Hardwood Forest,UN
+20,20,6587.000000000000000,1883,180,13700_53_61_62,Appalachian (Hemlock-)Northern Hardwood Forest,Agriculture
+21,21,2770.000000000000000,1875,180,13200_48_57_61,Central and Southern Appalachian Montane Oak Forest,Agriculture
+22,22,4461.000000000000000,1874,180,13180_57_59_61,Southern and Central Appalachian Cove Forest,Agriculture
+23,23,29019.000000000000000,1878,120,13500_61,Central and Southern Appalachian Spruce-Fir Forest,Developed
+24,24,4726.000000000000000,1888,180,14720_61_62_63,Central Interior and Appalachian Riparian Systems,Agriculture
+25,25,16842.000000000000000,1870,7,13030_61_63_64_65_66,Northeastern Interior Dry-Mesic Oak Forest,UE
+26,26,94217.000000000000000,1870,4,13030_61_63_64_65_66,Northeastern Interior Dry-Mesic Oak Forest,D
+27,27,27662.000000000000000,1870,3,13030_61_63_64_65_66,Northeastern Interior Dry-Mesic Oak Forest,C
+28,28,6574.000000000000000,1870,180,13030_61_63_64_65_66,Northeastern Interior Dry-Mesic Oak Forest,Agriculture
+29,29,164.000000000000000,1888,4,14720_61_62_63,Central Interior and Appalachian Riparian Systems,D
+30,30,3468.000000000000000,1874,3,13180_57_59_61,Southern and Central Appalachian Cove Forest,C
+31,31,9948.000000000000000,1870,120,13030_61_63_64_65_66,Northeastern Interior Dry-Mesic Oak Forest,Developed
+32,32,811.000000000000000,1882,7,13690_60_61_63_64_65_66,Central Appalachian Dry Oak-Pine Forest,UE
+33,33,57642.000000000000000,1870,5,13030_61_63_64_65_66,Northeastern Interior Dry-Mesic Oak Forest,E
+34,34,4657.000000000000000,1882,3,13690_60_61_63_64_65_66,Central Appalachian Dry Oak-Pine Forest,C
+35,35,399.000000000000000,1882,180,13690_60_61_63_64_65_66,Central Appalachian Dry Oak-Pine Forest,Agriculture
+36,36,2888.000000000000000,1882,2,13690_60_61_63_64_65_66,Central Appalachian Dry Oak-Pine Forest,B
+37,37,3379.000000000000000,1875,3,13200_48_57_61,Central and Southern Appalachian Montane Oak Forest,C
+38,38,832.000000000000000,1888,1,14720_61_62_63,Central Interior and Appalachian Riparian Systems,A
+39,39,10486.000000000000000,11,111,NA,Open Water,Water
+40,40,3804.000000000000000,1889,3,14790_60_61_63_64_65_66,Central Interior and Appalachian Swamp Systems,C
+41,41,637513.000000000000000,1878,2,13500_61,Central and Southern Appalachian Spruce-Fir Forest,B
+42,42,100248.000000000000000,1878,3,13500_61,Central and Southern Appalachian Spruce-Fir Forest,C
+43,43,37210.000000000000000,1878,4,13500_61,Central and Southern Appalachian Spruce-Fir Forest,D
+44,44,56068.000000000000000,1878,7,13500_61,Central and Southern Appalachian Spruce-Fir Forest,UE
+45,45,568.000000000000000,1875,2,13200_48_57_61,Central and Southern Appalachian Montane Oak Forest,B
+46,46,3425.000000000000000,1878,180,13500_61,Central and Southern Appalachian Spruce-Fir Forest,Agriculture
+47,47,3446.000000000000000,1878,6,13500_61,Central and Southern Appalachian Spruce-Fir Forest,UN
+48,48,16509.000000000000000,1878,1,13500_61,Central and Southern Appalachian Spruce-Fir Forest,A
+49,49,122.000000000000000,1889,7,14790_60_61_63_64_65_66,Central Interior and Appalachian Swamp Systems,UE
+50,50,2854.000000000000000,1873,180,13170_57_61,Allegheny-Cumberland Dry Oak Forest and Woodland,Agriculture
+51,51,8563.000000000000000,1873,7,13170_57_61,Allegheny-Cumberland Dry Oak Forest and Woodland,UE
+52,52,2168.000000000000000,1889,120,14790_60_61_63_64_65_66,Central Interior and Appalachian Swamp Systems,Developed
+53,53,21633.000000000000000,1876,2,13210_61_63,South-Central Interior Mesophytic Forest,B
+54,54,4723.000000000000000,1876,120,13210_61_63,South-Central Interior Mesophytic Forest,Developed
+55,55,4903.000000000000000,1876,4,13210_61_63,South-Central Interior Mesophytic Forest,D
+56,56,6093.000000000000000,1876,6,13210_61_63,South-Central Interior Mesophytic Forest,UN
+57,57,46624.000000000000000,1873,5,13170_57_61,Allegheny-Cumberland Dry Oak Forest and Woodland,E
+58,58,1806.000000000000000,1885,3,13770_60_61_63_64_65_66,Central Appalachian Pine-Oak Rocky Woodland,C
+59,59,1548.000000000000000,1885,6,13770_60_61_63_64_65_66,Central Appalachian Pine-Oak Rocky Woodland,UN
+60,60,2670.000000000000000,1876,7,13210_61_63,South-Central Interior Mesophytic Forest,UE
+61,61,4503.000000000000000,1873,4,13170_57_61,Allegheny-Cumberland Dry Oak Forest and Woodland,D
+62,62,1709.000000000000000,1876,180,13210_61_63,South-Central Interior Mesophytic Forest,Agriculture
+63,63,2741.000000000000000,1873,120,13170_57_61,Allegheny-Cumberland Dry Oak Forest and Woodland,Developed
+64,64,93.000000000000000,1876,3,13210_61_63,South-Central Interior Mesophytic Forest,C
+65,65,632.000000000000000,1876,1,13210_61_63,South-Central Interior Mesophytic Forest,A
+66,66,581.000000000000000,1885,7,13770_60_61_63_64_65_66,Central Appalachian Pine-Oak Rocky Woodland,UE
+67,67,12.000000000000000,1879,5,13520_53_54_57_59_60_61,Southern Appalachian Montane Pine Forest and Woodland,E
+68,68,304.000000000000000,1874,2,13180_57_59_61,Southern and Central Appalachian Cove Forest,B
+69,69,94.000000000000000,1874,1,13180_57_59_61,Southern and Central Appalachian Cove Forest,A
+70,70,200.000000000000000,1882,5,13690_60_61_63_64_65_66,Central Appalachian Dry Oak-Pine Forest,E
+71,71,172.000000000000000,1885,4,13770_60_61_63_64_65_66,Central Appalachian Pine-Oak Rocky Woodland,D
+72,72,128.000000000000000,1885,120,13770_60_61_63_64_65_66,Central Appalachian Pine-Oak Rocky Woodland,Developed
+73,73,141.000000000000000,1885,180,13770_60_61_63_64_65_66,Central Appalachian Pine-Oak Rocky Woodland,Agriculture
+74,74,335.000000000000000,1889,180,14790_60_61_63_64_65_66,Central Interior and Appalachian Swamp Systems,Agriculture
+75,75,184.000000000000000,1889,2,14790_60_61_63_64_65_66,Central Interior and Appalachian Swamp Systems,B
+76,76,523.000000000000000,1887,120,14710_47_48_53_54_57_59_60_61_63,Central Interior and Appalachian Floodplain Systems,Developed
+77,77,936.000000000000000,1887,3,14710_47_48_53_54_57_59_60_61_63,Central Interior and Appalachian Floodplain Systems,C
+78,78,230.000000000000000,1882,4,13690_60_61_63_64_65_66,Central Appalachian Dry Oak-Pine Forest,D
+79,79,333.000000000000000,1887,2,14710_47_48_53_54_57_59_60_61_63,Central Interior and Appalachian Floodplain Systems,B
+80,80,612.000000000000000,1887,180,14710_47_48_53_54_57_59_60_61_63,Central Interior and Appalachian Floodplain Systems,Agriculture
+81,81,178.000000000000000,1887,7,14710_47_48_53_54_57_59_60_61_63,Central Interior and Appalachian Floodplain Systems,UE
+82,82,29.000000000000000,1887,4,14710_47_48_53_54_57_59_60_61_63,Central Interior and Appalachian Floodplain Systems,D
+83,83,31.000000000000000,1887,5,14710_47_48_53_54_57_59_60_61_63,Central Interior and Appalachian Floodplain Systems,E
+84,84,603.000000000000000,1873,2,13170_57_61,Allegheny-Cumberland Dry Oak Forest and Woodland,B
+85,85,1928.000000000000000,1873,3,13170_57_61,Allegheny-Cumberland Dry Oak Forest and Woodland,C
+86,86,272.000000000000000,1887,6,14710_47_48_53_54_57_59_60_61_63,Central Interior and Appalachian Floodplain Systems,UN
+87,87,1290.000000000000000,1883,1,13700_53_61_62,Appalachian (Hemlock-)Northern Hardwood Forest,A
+88,88,3.000000000000000,1887,1,14710_47_48_53_54_57_59_60_61_63,Central Interior and Appalachian Floodplain Systems,A
+89,89,227.000000000000000,1882,120,13690_60_61_63_64_65_66,Central Appalachian Dry Oak-Pine Forest,Developed
+90,90,161.000000000000000,1882,1,13690_60_61_63_64_65_66,Central Appalachian Dry Oak-Pine Forest,A
+91,91,98.000000000000000,1875,1,13200_48_57_61,Central and Southern Appalachian Montane Oak Forest,A
+92,92,19.000000000000000,1885,2,13770_60_61_63_64_65_66,Central Appalachian Pine-Oak Rocky Woodland,B
+93,93,13.000000000000000,1879,4,13520_53_54_57_59_60_61,Southern Appalachian Montane Pine Forest and Woodland,D
+94,94,1139.000000000000000,1884,5,13760_48_53_57_61,Southern Ridge and Valley/Cumberland Dry Calcareous Forest,E
+95,95,10.000000000000000,1879,7,13520_53_54_57_59_60_61,Southern Appalachian Montane Pine Forest and Woodland,UE
+96,96,167.000000000000000,1889,6,14790_60_61_63_64_65_66,Central Interior and Appalachian Swamp Systems,UN
+97,97,93.000000000000000,1873,1,13170_57_61,Allegheny-Cumberland Dry Oak Forest and Woodland,A
+98,98,6.000000000000000,1870,2,13030_61_63_64_65_66,Northeastern Interior Dry-Mesic Oak Forest,B
+99,99,5.000000000000000,1882,6,13690_60_61_63_64_65_66,Central Appalachian Dry Oak-Pine Forest,UN
+100,100,22.000000000000000,1884,4,13760_48_53_57_61,Southern Ridge and Valley/Cumberland Dry Calcareous Forest,D
+101,101,22.000000000000000,1870,6,13030_61_63_64_65_66,Northeastern Interior Dry-Mesic Oak Forest,UN
+102,102,1741.000000000000000,1884,6,13760_48_53_57_61,Southern Ridge and Valley/Cumberland Dry Calcareous Forest,UN
+103,103,201.000000000000000,1884,7,13760_48_53_57_61,Southern Ridge and Valley/Cumberland Dry Calcareous Forest,UE
+104,104,8.000000000000000,1879,180,13520_53_54_57_59_60_61,Southern Appalachian Montane Pine Forest and Woodland,Agriculture
+105,105,1.000000000000000,1889,1,14790_60_61_63_64_65_66,Central Interior and Appalachian Swamp Systems,A
+106,106,151.000000000000000,1884,120,13760_48_53_57_61,Southern Ridge and Valley/Cumberland Dry Calcareous Forest,Developed
+107,107,1.000000000000000,1884,2,13760_48_53_57_61,Southern Ridge and Valley/Cumberland Dry Calcareous Forest,B
+108,108,105.000000000000000,1884,180,13760_48_53_57_61,Southern Ridge and Valley/Cumberland Dry Calcareous Forest,Agriculture
+109,109,3.000000000000000,1879,120,13520_53_54_57_59_60_61,Southern Appalachian Montane Pine Forest and Woodland,Developed
+110,110,7.000000000000000,1870,1,13030_61_63_64_65_66,Northeastern Interior Dry-Mesic Oak Forest,A
+111,111,23.000000000000000,1884,3,13760_48_53_57_61,Southern Ridge and Valley/Cumberland Dry Calcareous Forest,C
