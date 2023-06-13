@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Randy Swaty" />
+
+
+<title>Home</title>
+
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.1.2/leaflet.js"></script>
+<script src="site_libs/clipboard-0.0.1/setClipboardText.js"></script>
+<link href="site_libs/font-awesome-6.2.1/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/v4-shims.min.css" rel="stylesheet" />
+
+<link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/main/img/reproducible.png">
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">vdep</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="data_wrangling.html">With attribute data</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/rswaty/vdep">
+    <span class="fab fa-github"></span>
+     
+    Source code
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Home</h1>
+<h4 class="author">Randy Swaty</h4>
+
+</div>
+
+
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+workflowr <span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span>
+</button>
+</p>
+<div id="workflowr-report" class="collapse">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#summary">Summary</a>
+</li>
+<li>
+<a data-toggle="tab" href="#checks"> Checks <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
+</li>
+<li>
+<a data-toggle="tab" href="#versions">Past versions</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="summary" class="tab-pane fade in active">
+<p>
+<strong>Last updated:</strong> 2023-06-13
+</p>
+<p>
+<strong>Checks:</strong> <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> 0
+</p>
+<p>
+<strong>Knit directory:</strong> <code>vdep/</code> <span
+class="glyphicon glyphicon-question-sign" aria-hidden="true"
+title="This is the local directory in which the code in this file was executed.">
+</span>
+</p>
+<p>
+This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a>
+analysis was created with <a
+  href="https://github.com/workflowr/workflowr">workflowr</a> (version
+1.7.0). The <em>Checks</em> tab describes the reproducibility checks
+that were applied when the results were created. The <em>Past
+versions</em> tab lists the development history.
+</p>
+<hr>
+</div>
+<div id="checks" class="tab-pane fade">
+<div id="workflowr-checks" class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
+</p>
+</div>
+<div id="strongRMarkdownfilestronguptodate"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20230609code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(20230609)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20230609code"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20230609)</code> was run prior to running
+the code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrswatyvdeptree69ac8219514bf3e8fea532ceaa4d2ea2c92fe82ftargetblank69ac821a">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/rswaty/vdep/tree/69ac8219514bf3e8fea532ceaa4d2ea2c92fe82f" target="_blank">69ac821</a>
+</a>
+</p>
+</div>
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomrswatyvdeptree69ac8219514bf3e8fea532ceaa4d2ea2c92fe82ftargetblank69ac821a"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>
+Great! You are using Git for version control. Tracking code development
+and connecting the code version to the results is critical for
+reproducibility.
+</p>
+<p>
+The results in this page were generated with repository version
+<a href="https://github.com/rswaty/vdep/tree/69ac8219514bf3e8fea532ceaa4d2ea2c92fe82f" target="_blank">69ac821</a>.
+See the <em>Past versions</em> tab to see a history of the changes made
+to the R Markdown and HTML files.
+</p>
+<p>
+Note that you need to be careful to ensure that all relevant files for
+the analysis have been committed to Git prior to generating the results
+(you can use <code>wflow_publish</code> or
+<code>wflow_git_commit</code>). workflowr only checks the R Markdown
+file, but you know if there are other scripts or data files that it
+depends on. Below is the status of the Git repository when the results
+were generated:
+</p>
+<pre><code>
+Ignored files:
+    Ignored:    .Rproj.user/
+
+Untracked files:
+    Untracked:  .gitignore
+
+</code></pre>
+<p>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not
+included in this status report because it is ok for generated content to
+have uncommitted changes.
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="versions" class="tab-pane fade">
+
+<p>
+These are the previous versions of the repository in which changes were
+made to the R Markdown (<code>analysis/index.Rmd</code>) and HTML
+(<code>docs/index.html</code>) files. If you’ve configured a remote Git
+repository (see <code>?wflow_git_remote</code>), click on the hyperlinks
+in the table below to view the files as they were in that past version.
+</p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+File
+</th>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+<th>
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/rswaty/vdep/blob/d0dcd0b770e1602c91084ae453dcd411cc5ac2a1/analysis/index.Rmd" target="_blank">d0dcd0b</a>
+</td>
+<td>
+GitHub
+</td>
+<td>
+2023-06-13
+</td>
+<td>
+Add files via upload
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<p>Providing background, code and guidance to help R users interested in
+exploring and visualizing Vegetation Departure (VDEP; see About page for
+VDEP documentation). We will be working with data from the Southern High
+Allegheny Mountains subsection (aka “335Ba”; <a
+href="https://www.fs.usda.gov/research/treesearch/48672"
+target="blank">Cleland et al., 2007</a>), located in West Virginia:</p>
+<p><br></p>
+<pre class="r"><code># load packages
+
+library(sf)
+library(terra)
+library(tidyverse)
+library(tmap)
+
+#  read shape
+shp &lt;- st_read(&quot;data/sub335Ba.shp&quot;, quiet = TRUE) %&gt;% 
+  st_transform(crs = 5070) %&gt;%
+  st_union() %&gt;%
+  st_sf()
+# toggle tmap mode to interactive viewing
+tmap_mode(&quot;view&quot;)
+
+# create a quick interactive map
+quickmap &lt;- qtm(shp, 
+                borders = &quot;darkgreen&quot;, 
+                fill = NULL, 
+                check.and.fix = TRUE, 
+                basemaps = &#39;https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}&#39;,
+                title = &#39;Southern High Allegheny Mountains Subsection&#39;,)
+
+quickmap</code></pre>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-f3669a4d9ce34e7cb990" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-f3669a4d9ce34e7cb990">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"createMapPane","args":["tmap401",401]},{"method":"createMapPane","args":["tmap402",402]},{"method":"addTiles","args":["https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",null,"server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addPolygons","args":[[[[{"lng":[-80.026529166891,-80.0253015347097,-80.0244387458094,-80.0235819261907,-80.0240842096773,-80.0243867937825,-80.0244013016658,-80.0247118109905,-80.0249179900606,-80.0243524446491,-80.023783764768,-80.0249614232801,-80.0269125202117,-80.0282794598473,-80.0289805421453,-80.0313736328568,-80.032330408372,-80.031580669589,-80.0270855054087,-80.0268856554691,-80.0282604487623,-80.0285645482301,-80.0291361244034,-80.029197412304,-80.0274854407704,-80.0228258677764,-80.0226474274944,-80.0232020166168,-80.0242275100053,-80.02334060122,-80.0200528602455,-80.019862520656,-80.0127048124891,-80.0111924040027,-80.0190461251667,-80.0259554084115,-80.0312285431956,-80.038152273216,-80.0389844621874,-80.0383217064972,-80.0370826503875,-80.0466264236541,-80.0550611672968,-80.0585274089577,-80.061552931254,-80.0599782228333,-80.0637187920138,-80.0724189549733,-80.0838006179064,-80.0895113298551,-80.0967279935303,-80.1013585918317,-80.1020999467689,-80.1100708763271,-80.1221929722767,-80.1347138352573,-80.1472655993816,-80.1515184261174,-80.1504464242813,-80.1490321515855,-80.1535782982897,-80.1570073432471,-80.1604334084597,-80.1604642534114,-80.1593506739706,-80.1574815391323,-80.1564100968817,-80.1555608549566,-80.1590155845072,-80.1633386312458,-80.1644922584893,-80.1694554816821,-80.1721371448201,-80.1748152597326,-80.1763736370347,-80.1801774545582,-80.1854470672496,-80.1871485537349,-80.1854946672521,-80.1862627111608,-80.192900785883,-80.2005924098939,-80.204056489985,-80.2056283199452,-80.2113872249254,-80.2175990173667,-80.2165647549424,-80.2157418491915,-80.2194680351195,-80.2266475473991,-80.2305127113841,-80.2335900486989,-80.2353952239987,-80.2357777361061,-80.240769025055,-80.2415681190089,-80.2390703738205,-80.2335868148123,-80.2289704327499,-80.2229505191598,-80.2237774581319,-80.2259828042944,-80.2346799732931,-80.2499438196486,-80.2575386093856,-80.2718972429335,-80.2762761801255,-80.2938301189382,-80.3051956674502,-80.3072152848739,-80.3099800412312,-80.3161171047463,-80.332807133245,-80.3384885070004,-80.340342291961,-80.3387849883582,-80.3415923683565,-80.353959129889,-80.360668261612,-80.3632387039024,-80.3710128249682,-80.3791565944157,-80.3892088792417,-80.4101677773405,-80.4232549653324,-80.4327739053485,-80.4346733209322,-80.43878117745,-80.4482757340874,-80.4550189139473,-80.4677967448974,-80.4736952306706,-80.4797104443581,-80.4907719434532,-80.4948192944183,-80.501970045325,-80.5073041527674,-80.5087408764929,-80.5132601778316,-80.5181109491812,-80.5196733398266,-80.5209095619218,-80.5185895866692,-80.5136865901433,-80.516824334146,-80.5199031349822,-80.5195751205356,-80.5312902991093,-80.5368943398264,-80.5449994783981,-80.556941998862,-80.5710190953021,-80.5777642458609,-80.5873849645528,-80.5948552557866,-80.5973098640851,-80.6078791124985,-80.6134846592055,-80.6256476556658,-80.6374200172963,-80.6368924659687,-80.644083923632,-80.6509628789393,-80.6581114002978,-80.6635566708678,-80.6711393508675,-80.6801887712314,-80.6911533979778,-80.704449696944,-80.7121846561918,-80.7232485531863,-80.7311047501752,-80.7322465410047,-80.7241487036587,-80.7184488889316,-80.7157840125352,-80.7141305075721,-80.7057998933416,-80.7044048093212,-80.7089476059467,-80.7103950664984,-80.7031810137458,-80.6937161487264,-80.6911739445294,-80.6877881742624,-80.6900186164834,-80.699050843169,-80.7079474601061,-80.7246257144233,-80.7332486107878,-80.7391474458473,-80.7443991315695,-80.7468054396686,-80.7588106390347,-80.7575077337606,-80.7510937717491,-80.7488826317489,-80.762326081658,-80.7773809257404,-80.8014425418952,-80.8123136500818,-80.8276599981072,-80.8540189135092,-80.8733871860143,-80.891950427932,-80.8736008802391,-80.8464760436495,-80.8433919117529,-80.8362494009776,-80.8198248494274,-80.8091658802396,-80.8100369917931,-80.8144141746947,-80.8177109671688,-80.818763145685,-80.8070233507011,-80.799976990706,-80.7995852103898,-80.794734784133,-80.7893666587074,-80.7806575988329,-80.767355687754,-80.7501440658658,-80.7356517591596,-80.7203568407845,-80.7085064386969,-80.7084964625348,-80.7078836014456,-80.6981444323921,-80.6878388574101,-80.6792195749947,-80.6723267440416,-80.6745833331922,-80.6854062842614,-80.6890815985698,-80.6774674925588,-80.662432344969,-80.6544278429213,-80.6310326768121,-80.6299655641169,-80.608693777299,-80.599026369492,-80.6006573311122,-80.6029922432616,-80.5976715066585,-80.5917198217204,-80.5927344964887,-80.5842978276317,-80.5701910702494,-80.5588308807526,-80.542164145913,-80.5290590960585,-80.5323609290137,-80.5268082825504,-80.516391309236,-80.495542340492,-80.4942726816833,-80.4801387750083,-80.4832356194094,-80.4789471084032,-80.4862924352568,-80.4866380851371,-80.4820305307196,-80.4788481868337,-80.4674239065427,-80.4709585725777,-80.4669405600934,-80.4677281640966,-80.475096847378,-80.4809164036289,-80.4753660214589,-80.4711095380985,-80.4718637416482,-80.4719822219322,-80.47257785786,-80.4722142370735,-80.4702247576439,-80.4686682606871,-80.4652024992691,-80.4618702878095,-80.4485901412128,-80.4446742512973,-80.4342358768673,-80.4332466302895,-80.4141724650651,-80.4078636840008,-80.4062598452597,-80.3968035968754,-80.3933207346169,-80.3879306270196,-80.3853858411447,-80.3807987784454,-80.3741693408553,-80.3671523436041,-80.3633458732169,-80.3557988208533,-80.3521842727042,-80.3517137789735,-80.35954022517,-80.3574738611334,-80.3642457742756,-80.370938014809,-80.3544502275588,-80.3444515728448,-80.3269619213312,-80.3127523487802,-80.3109596554604,-80.3006164805296,-80.2871967348836,-80.2778965302266,-80.2688368493761,-80.2564733804063,-80.2499680806272,-80.2366651765784,-80.236062397496,-80.2403757489353,-80.2325513254082,-80.2325803775534,-80.2230564541943,-80.217788380424,-80.2065762833637,-80.2035269122264,-80.1996159604104,-80.2006655049947,-80.1929230767276,-80.1858722932361,-80.181963893888,-80.1804130361611,-80.1762233742538,-80.1692310520919,-80.1535038356571,-80.1501916374878,-80.1557322534979,-80.1542531146476,-80.1535179773903,-80.1475209227068,-80.138999499978,-80.1363299650783,-80.1282212247889,-80.1168338079235,-80.1126699682604,-80.1104377581256,-80.1084172865661,-80.1070639559246,-80.1019648492075,-80.0990831692956,-80.0986238554076,-80.0986729270412,-80.0941615618303,-80.0900827215364,-80.0857864034905,-80.0858037665003,-80.084033843434,-80.0820024884643,-80.0764101354597,-80.075384232394,-80.0741669073594,-80.0662821015908,-80.0655057454153,-80.068402458461,-80.0682894212666,-80.0629601142206,-80.0623432320994,-80.0591046281317,-80.0534591254662,-80.0479477558781,-80.0450047959688,-80.0312934990699,-80.026529166891],"lat":[38.4734343602132,38.4710630404156,38.4699068431161,38.4683631790169,38.4672949504842,38.4665314607528,38.4654546614473,38.4641550299393,38.4633141347518,38.4618495001146,38.4606191450906,38.460088239199,38.4601044624917,38.4600392072129,38.4586662003069,38.4559463936882,38.4530659851427,38.4496217458473,38.4424245357784,38.4421074591362,38.4404696874702,38.4358941500015,38.4294147985311,38.424837237123,38.4186994204971,38.4118115702273,38.4070427513339,38.4018970309627,38.3977059891823,38.391597484833,38.3837476292227,38.3799294529243,38.3716684557057,38.3704526040722,38.3643994169916,38.3573014629209,38.3528120887193,38.3474212975272,38.3417640321615,38.3346075100985,38.3252968588059,38.3188185191923,38.310244148188,38.3055000937392,38.3055243389184,38.31028365954,38.3135894904409,38.313658618866,38.3110669643093,38.3081284100455,38.3058004893899,38.2983874935491,38.2934454812978,38.2911179891362,38.2894249055542,38.2859400770399,38.2797729883488,38.2717558885541,38.2663813342504,38.2580257313655,38.2571663971752,38.2548028276291,38.2527410461811,38.2500601118583,38.2482632011138,38.2464608568642,38.2410908458342,38.234798656997,38.2327731610419,38.2301093752655,38.2283286478735,38.2238937578833,38.2206367185872,38.2176724909123,38.2135107188224,38.2111535784724,38.2085000718865,38.205069142101,38.2033318096125,38.2007055225511,38.2018283254555,38.2017998404126,38.196952181743,38.1878738239515,38.1838119985387,38.1859849913335,38.192863574731,38.19911719092,38.2039095787753,38.2036596836725,38.1953395987689,38.189992836534,38.1875126726236,38.1815714686012,38.179138947366,38.1762601301332,38.172237939913,38.1724546280914,38.1748127044896,38.176800819575,38.1727056321375,38.1686736032246,38.1639900552155,38.1598391574839,38.1554172282862,38.1486621345397,38.1501041600692,38.1497243393836,38.1453174098567,38.1313238689807,38.118222373205,38.1058839948967,38.0974900882297,38.0948409586171,38.0984248791466,38.1037831290011,38.109963507162,38.1100772214556,38.1033094055829,38.1113716169352,38.1093451012086,38.1066350641512,38.0980942177468,38.09460975787,38.0921692032501,38.0820041944579,38.0778134418654,38.0759945429945,38.0747687094515,38.0711184889218,38.0683064981813,38.0616095784937,38.0555798102161,38.0460026483691,38.0445465263028,38.0463255106472,38.0423418197003,38.0358271001152,38.0249043889993,38.010125360387,38.0016687194507,37.9969014727632,37.9941971626955,37.9919463152678,37.9876826564693,37.9836710285945,37.981912183878,37.9702562478649,37.9701928219739,37.9647220870974,37.9575573557178,37.9445362965066,37.9438531814609,37.9472671600196,37.9534173996502,37.9619745720695,37.9618435368429,37.9627183130045,37.9733973760177,37.9850608776373,37.9954916478602,38.0028681234591,37.9916136480204,37.991440868458,37.9904741675009,37.9995220037228,37.9835581136396,37.9730062694081,37.9756721968037,37.982712428724,37.9897645324656,37.9886696637899,37.9836385656522,37.9782301373853,37.973804812918,37.9610406112942,37.958472425128,37.9586727055485,37.9549198262165,37.9476261590765,37.9444030931644,37.9413387367791,37.9402194053139,37.936494913404,37.9353683715955,37.9321521313059,37.93044057932,37.91993582817,37.9143248830321,37.9080852049429,37.9003742645453,37.8885877158192,37.8768804472162,37.8646546261504,37.8569840609258,37.846745308351,37.8385904998713,37.8388910443103,37.8323611549077,37.8294230795708,37.840470736463,37.8465645360904,37.8494730949743,37.8416788734176,37.8502846298301,37.8862624191486,37.907692496639,37.9209015264785,37.9310900199871,37.9402998239895,37.9446768464395,37.9574901828968,37.9623145904998,37.9697779538865,37.9733487011962,37.9758085838278,37.9818895455026,37.9919608017828,38.0072653311535,38.0158946727988,38.0191188721585,38.0330001223297,38.0408329994042,38.0461684354582,38.0509864403572,38.0713625813763,38.0803392610167,38.0907249224807,38.0970227373179,38.1015111821561,38.1123257423787,38.1199855298571,38.1267648273435,38.1358249997612,38.1438245027735,38.1475739891623,38.1535206349399,38.1536640904906,38.1569185815878,38.1595784515933,38.1591760385193,38.1690798174677,38.1748534282639,38.183112356026,38.2100642868949,38.2188579803089,38.2260129270807,38.2266502761231,38.2234405902509,38.2194059087954,38.2213383552781,38.2267751122572,38.2379277288986,38.2487159112994,38.2586186686507,38.2870055678994,38.2982925984338,38.3165393850078,38.3283637126979,38.3355951356556,38.3419451592877,38.3527569042764,38.3700672149952,38.3788355383308,38.3809426240912,38.4057331815181,38.4246495489452,38.4349900638174,38.4433099639873,38.4479410866142,38.4523277983213,38.45649478867,38.4604364813419,38.4656054543756,38.469794255161,38.4744653838229,38.4934222991896,38.4905719438859,38.4862078530678,38.4812855227108,38.4824133525653,38.4907895821757,38.496863307155,38.4966106939238,38.4873335754186,38.4902623068272,38.4857166258075,38.4835504808461,38.4900752316708,38.4872985193297,38.4904258854616,38.4891400415723,38.4977293083198,38.5036530448263,38.5147622203558,38.52243519478,38.5178281611768,38.5142523103311,38.510190416981,38.501523079447,38.4939493951984,38.485649409143,38.487262972327,38.4993195749446,38.5105304101053,38.511596907625,38.4995418709849,38.4957450955627,38.5024502072607,38.5121486753567,38.5098710157508,38.5189357803943,38.5323896364728,38.5437082120912,38.53465634486,38.5267404152894,38.5252249579927,38.5176281051415,38.5243963288615,38.5211845587042,38.5238938011725,38.5329390601513,38.531195626221,38.5219475850004,38.5361287440914,38.5418745578231,38.5385084195008,38.5315944830733,38.5337234235183,38.5461374131651,38.5578572812044,38.5554496574725,38.5490507959722,38.5457012347019,38.5461915727264,38.5501853575149,38.5528220347607,38.5498735288156,38.5580412096695,38.5585686522507,38.5597177083768,38.5613364071251,38.5658404454946,38.571025420126,38.577209033583,38.5846891729202,38.5853254705223,38.5892639816411,38.5884361166141,38.5854711524282,38.5818014319973,38.5804317821444,38.5754975270517,38.5661499344593,38.5518763485534,38.543437719144,38.5306493557271,38.5251165695907,38.5192842314328,38.5135307274359,38.5103982126975,38.5072691330474,38.4956929761105,38.4859837500532,38.4817207053521,38.4777693872936,38.4736044709165,38.4715768577457,38.4734343602132]}]]],"X1","shp",{"interactive":false,"className":"","pane":"tmap401","stroke":true,"color":"#006400","weight":1,"opacity":1,"fill":true,"fillOpacity":0,"dashArray":"none","smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[[],"shp",{"collapsed":true,"autoZIndex":true,"position":"topleft"}]},{"method":"addScaleBar","args":[{"maxWidth":100,"metric":true,"imperial":false,"updateWhenIdle":true,"position":"bottomright"}]}],"limits":{"lat":[37.8294230795708,38.5892639816411],"lng":[-80.891950427932,-80.0111924040027]},"fitBounds":[37.8294230795708,-80.891950427932,38.5892639816411,-80.0111924040027,[]]},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      if( strip !==null) strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null},{"code":"function(el, x, data) {\n  return (\n\t\t\t\t\t\tfunction(el, x) {\n\t\t\t\t\t\t\tvar tldiv = document.getElementsByClassName(\"leaflet-top leaflet-left\")[0];\n\t\t\t\t\t\t\tvar titlediv = document.createElement('div');\n\t\t\t\t\t\t\ttitlediv.className = \"info legend leaflet-control\";\n\t\t\t\t\t\t\ttitlediv.innerHTML = \"<b>Southern High Allegheny Mountains Subsection<\/b>\";\n\t\t\t\t\t\t\ttldiv.insertBefore(titlediv, tldiv.childNodes[0]);\n\t\t\t\t\t\t}).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>R version 4.2.2 Patched (2022-11-30 r83413 ucrt)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 22621)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] tmap_3.3-3      lubridate_1.9.2 forcats_1.0.0   stringr_1.5.0  
+ [5] dplyr_1.1.1     purrr_1.0.1     readr_2.1.4     tidyr_1.3.0    
+ [9] tibble_3.2.1    ggplot2_3.4.2   tidyverse_2.0.0 terra_1.7-29   
+[13] sf_1.0-13      
+
+loaded via a namespace (and not attached):
+ [1] sass_0.4.5              jsonlite_1.8.4          viridisLite_0.4.1      
+ [4] bslib_0.4.2             sp_1.6-0                yaml_2.3.7             
+ [7] lattice_0.20-45         pillar_1.9.0            glue_1.6.2             
+[10] digest_0.6.31           RColorBrewer_1.1-3      promises_1.2.0.1       
+[13] leaflet.providers_1.9.0 colorspace_2.1-0        htmltools_0.5.5        
+[16] httpuv_1.6.9            XML_3.99-0.14           pkgconfig_2.0.3        
+[19] raster_3.6-20           stars_0.6-0             s2_1.1.4               
+[22] scales_1.2.1            whisker_0.4.1           later_1.3.0            
+[25] tzdb_0.3.0              timechange_0.2.0        git2r_0.31.0           
+[28] proxy_0.4-27            generics_0.1.3          ellipsis_0.3.2         
+[31] cachem_1.0.7            withr_2.5.0             leafsync_0.1.0         
+[34] cli_3.6.1               magrittr_2.0.3          evaluate_0.20          
+[37] fs_1.6.1                fansi_1.0.4             lwgeom_0.2-11          
+[40] class_7.3-21            tools_4.2.2             hms_1.1.3              
+[43] lifecycle_1.0.3         munsell_0.5.0           compiler_4.2.2         
+[46] jquerylib_0.1.4         e1071_1.7-13            rlang_1.1.0            
+[49] classInt_0.4-9          units_0.8-2             grid_4.2.2             
+[52] tmaptools_3.1-1         dichromat_2.0-0.1       rstudioapi_0.14        
+[55] htmlwidgets_1.6.2       crosstalk_1.2.0         base64enc_0.1-3        
+[58] leafem_0.2.0            rmarkdown_2.21          wk_0.7.3               
+[61] gtable_0.3.3            codetools_0.2-19        abind_1.4-5            
+[64] DBI_1.1.3               R6_2.5.1                knitr_1.42             
+[67] fastmap_1.1.1           utf8_1.2.3              workflowr_1.7.0        
+[70] rprojroot_2.0.3         KernSmooth_2.23-20      stringi_1.7.12         
+[73] parallel_4.2.2          Rcpp_1.0.10             png_0.1-8              
+[76] vctrs_0.6.1             leaflet_2.1.2           tidyselect_1.2.0       
+[79] xfun_0.38              </code></pre>
+</div>
+
+
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+https://docs.mathjax.org/en/latest/web/configuration.html. This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
