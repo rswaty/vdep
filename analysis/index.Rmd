@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Introduction"
 site: workflowr::wflow_site
 author: "Randy Swaty"
 output:
@@ -10,7 +10,9 @@ editor_options:
   chunk_output_type: console
 ---
 
-Providing background, code and guidance to help R users interested in exploring and visualizing Vegetation Departure (VDEP; see About page for VDEP documentation).  We will be working with data from the Southern High Allegheny Mountains subsection (aka "335Ba"; [Cleland et al., 2007](https://www.fs.usda.gov/research/treesearch/48672){target="blank"}), located in West Virginia:
+This is Randy Swaty's Vegetation Departure playground, sand box, place to share and experiment.  This is not an official LANDFIRE resource and will probably always be under construction!  My main goal is to provide background, code and guidance to help R users interested in exploring and visualizing Vegetation Departure (VDEP; see Resources page for VDEP documentation).  There will be *some* guidance for non-R VDEP operations. 
+
+We will be working with data from the Southern High Allegheny Mountains subsection (aka "335Ba"; [Cleland et al., 2007](https://www.fs.usda.gov/research/treesearch/48672){target="blank"}), located in West Virginia:
 
 <br>
 

@@ -1,0 +1,116 @@
+---
+title: "Resources"
+author: "Randy Swaty"
+date: "2023-10-04"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Introduction
+
+Below is a collection of links to datasets, documentation, project that have used Vegetation Departure (VDEP) and videos.  This is not intended to be a complete collection, and is subject to grow!
+
+*note-the collection below is limited to LANDFIRE-Powered VDEP resources, either VDEP as delivered by LANDFIRE, or by users that have used LANDFIRE data inputs to calculate VDEP regionally or locally.*
+
+Some "start here" papers:
+
+* Blankenship, K., Swaty, R., Hall, K.R., Hagen, S., Pohl, K., Shlisky Hunt, A., Patton, J., Frid, L. and Smith, J., 2021. Vegetation dynamics models: a comprehensive set for natural resource assessment and planning in the United States. Ecosphere, 12(4), p.e03484.
+* Swaty, R., Blankenship, K., Hall, K.R., Smith, J., Dettenmaier, M. and Hagen, S., 2021. Assessing Ecosystem Condition: Use and Customization of the Vegetation Departure Metric. Land, 11(1), p.28. https://www.mdpi.com/2073-445X/11/1/28 https://esajournals.onlinelibrary.wiley.com/doi/pdf/10.1002/ecs2.3484
+
+
+## LANDFIRE VDEP Data as delivered (i.e., not customized or calculated with raw inputs by a user)
+
+
+### Data and documentation
+* The actual data websites
+    * VDEP as a continuous dataset https://landfire.gov/vdep.php.  Note link to metadata at bottom of page. 
+    * Vegetation Condition Class (VCC), a simple classified version of VDEP https://landfire.gov/vcc.php.  Note link to metadata at bottom of page. 
+* Relevant documentation
+    * Source of original methods, the Interagency Fire Regime Condition Class Guidebook https://landfire.gov/frcc/documents/FRCC_Guidebook_2010_final.pdf
+    * FAQ that has comments about name change from Fire Regime Condition Class (FRCC) to Vegetation Condition Class (VCC) https://landfire.gov/faq.php#regime
+    * Be very careful when comparing versions of VDEP or VCC.  
+    
+### Some papers that have referenced LANDFIRE's VDEP or VCC
+
+* Walston, L.J. and Hartmann, H.M., 2018. Development of a landscape integrity model framework to support regional conservation planning. PLoS One, 13(4), p.e0195115.  https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0195115
+* Vogler, K.C., Ager, A.A., Day, M.A., Jennings, M. and Bailey, J.D., 2015. Prioritization of forest restoration projects: tradeoffs between wildfire protection, ecological restoration and economic objectives. Forests, 6(12), pp.4403-4420.  https://www.mdpi.com/1999-4907/6/12/4375/pdf
+* Knight, K.B., Comer, P.J., Pickard, B.R., Gordon, D.R. and Toombs, T., 2021. Including Condition into Ecological Maps Changes Everything—A Study of Ecological Condition in the Conterminous United States. Land, 10(11), p.1145. https://www.mdpi.com/2073-445X/10/11/1145
+* Cleland, D., Reynolds, K., Vaughan, R., Schrader, B., Li, H. and Laing, L., 2017. Terrestrial condition assessment for national forests of the USDA Forest Service in the continental US. Sustainability, 9(11), p.2144. https://www.mdpi.com/2071-1050/9/11/2144/pdf
+* Swaty, R., Blankenship, K., Hagen, S., Fargione, J., Smith, J. and Patton, J., 2011. Accounting for ecosystem alteration doubles estimates of conservation risk in the conterminous United States. PLoS One, 6(8), p.e23002. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0023002
+
+
+### Other
+
+* A deprecated (based on an older version of VDEP) VDEP calculator tool which allows users to explore VDEP for different geographic variables such as 'Federal Ownership',  https://www.conservationgateway.org/Files/Pages/vegetation-departure-calc.aspx and a short video about it, https://www.youtube.com/watch?v=-vDxa3LvHGg
+* Notes: 
+    * LANDFIRE's VDEP (and similar with VCC) data as delivered assigns one VDEP value (0-100) for each Biophysical Setting within a LANDFIRE [Map Zone](https://landfirereview.org/IMG/USmapzones-v1_July2015.jpg).  For example, the Laurentian Acadian Northern Hardwoods might have VDEP values of 57, 38 and 62 for Map Zones 41, 50 and 51 respectively.  In the map every pixel of that type within the respective Map Zone will be labled the same (e.g., 57 for MZ 41).
+    * As delivered, LANDFIRE's VDEP data does not present over or underrepresentation of succession classes.  To get those calculations a user must calculate VDEP locally.
+    
+<br>
+
+![This type of chart which depicts amounts of reference vs. current succession classes per Biophysical Setting is *not* a part of the LANDFIRE delivered VDEP/VCC datasets refered to above.  Users can generate these charts themselves as described below and elsewhere in this website](assets/sclass_chart.png)
+    
+
+## Calculating VDEP yourself, and digging deeper
+
+This 'website' is mostly about calculating VDEP yourself, which means taking inputs and doing the GIS manually to create your own VDEP/VCC layer and learn much more about what is actually happening with succession classes on your landscape
+
+### Necessary inputs and a very brief note about methods
+
+*all inputs listed below can be created locally.  Links provided are to LANDFIRE inputs (except last one).*
+
+* Reference Conditions: these come from the Biophysical Settings models and descriptions, https://landfire.gov/bps-models.php.  The actual data table with reference conditions is available as a .csv file at https://landfire.gov/zip/LANDFIRE_CONUS_Reference_Condition_Table_August_2020.zip.  Also see "With attribute data" page on this website to download a custom formatted reference condition table.
+* Biophysical Settings (BpS) spatial data, https://landfire.gov/bps.php
+* Succession Class spatial data, https://landfire.gov/sclass.php
+* a landscape boundary--bigger is better!
+
+As of October 4, 2023 the "what to do" with these datasets has not been written, but in very simplistic terms the user will:
+1. Combine (literally using the 'Combine" tool in ArcPro, or using other methods in R, QGIS, etc.) the BpS and Sclass data, then join attributes.  Export this table as a .csv. See demo here: https://www.youtube.com/watch?v=cK-xbuVOcfk
+2. If using R, use methods on the "With attribute data" page; if using Excel use pivot tables to calculate current percentages of each succession class per BpS. See pivot table demo here: https://www.youtube.com/watch?v=8uJgSj3qapA
+3. Use reference conditions from descriptions and/or reference condition tables above to obtain reference percentages of each succession class per BpS.
+
+*Please see Swaty et al. (2021) referenced above for conceptual framework*
+
+<br>
+
+*Most users present succession class information when calculating VDEP locally instead of a single VDEP number (as in a VDEP map for example)*
+
+### Papers and web reports where users have calculated VDEP themselves, often with custom inputs
+
+* For a great selection of "power-user" papers on this search Google Scholar for "Provencher landscape conservation forecasting".  One such paper is:
+    Provencher, L., Badik, K., Anderson, T., Tuhy, J., Fletcher, D., York, E. and Byer, S., 2021. Landscape conservation forecasting for data-poor at-risk species on western public lands, United States. Climate, 9(5), p.79. https://www.mdpi.com/2225-1154/9/5/79/pdf
+* Swaty el al. have developed and deployed multiple web reports with user calculated succession class charts, such as the one above.  See examples at:
+    * https://thenatureconservancy.github.io/wyba/comparing.html
+    * https://rswaty.github.io/flathead/comparing.html
+    * https://rswaty.github.io/hiawatha2023/comparing.html
+* In the Wayne National Forest Terrestrial Ecosystem Assessment authors used USFS Land Types instead of LANDFIRE's Biophysical Settings https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fseprd695556.pdf
+
+
+### Other
+
+* If you want to explore and/or adjust reference condition models, start here, TNC's Vegetation Modeling website: https://thenatureconservancy.github.io/landfiremodels/
+* If you want to find specific Biophysical Settings descriptions, learn more about BpSs or the basics BpS modeling, visit https://landfirereview.org/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
